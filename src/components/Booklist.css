@@ -1,0 +1,10 @@
+.list{
+    list-style:none ;
+}
+.box{
+ display:flex;
+}
+
+.image{
+ width:200px;
+}
