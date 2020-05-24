@@ -26,7 +26,13 @@ const Booklist = props => {
                             <div key={index} className="box container">
                                 <div className="image col-4">
                                     {/* vue,angular なぜか表示エラー */}
-                                    <img src={x.volumeInfo.imageLinks.thumbnail} />
+                                    {/* <img src={x.volumeInfo.imageLinks.thumbnail} alt="" /> */}
+                                    {/* 解決URL:https://stackoverflow.com/questions/51692323/google-books-api-cannot-read-property-thumbnail-of-undefURL: */}
+                                    <img src={
+                                        x.volumeInfo.imageLinks === undefined
+                                            ? ""
+                                            : `${x.volumeInfo.imageLinks.thumbnail}`
+                                    } />
                                 </div>
                                 <div className="string col-8">
                                     <p>{x.volumeInfo.title}</p>

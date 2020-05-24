@@ -28,8 +28,7 @@ const App = () => {
             props =>
               <Booklist language={languages[0]}
                 getData={keyword => getDataFromAPI(keyword)}
-              />
-          }
+              />}
         />
         <Route
           path='/vue'
@@ -37,8 +36,7 @@ const App = () => {
             props =>
               <Booklist language={languages[1]}
                 getData={keyword => getDataFromAPI(keyword)}
-              />
-          }
+              />}
         />
         <Route
           path='/angular'
@@ -51,6 +49,5 @@ const App = () => {
       </div>
     </BrowserRouter>
   );
-
 }
 export default App;
